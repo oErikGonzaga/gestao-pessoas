@@ -1,6 +1,6 @@
 package com.gonzaga.gestaopessoas.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,6 +22,7 @@ public class Pessoa {
     private String nome;
 
     @Column(nullable = false)
+    @JsonFormat(pattern="dd-MM-yyyy")
     private LocalDate nascimento;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
