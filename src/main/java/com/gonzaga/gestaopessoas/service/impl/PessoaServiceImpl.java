@@ -33,7 +33,6 @@ public class PessoaServiceImpl implements PessoaService {
     public boolean editar(Long id, String nome, String nascimento) {
 
         var pessoa = consultar(id);
-
         boolean isAtualizado = false;
 
         if (Objects.nonNull(nome) && !("".equals(nome)) && !(nome.equals(pessoa.getNome()))) {
@@ -47,7 +46,6 @@ public class PessoaServiceImpl implements PessoaService {
         }
 
         if (isAtualizado = true) repository.save(pessoa);
-
         return isAtualizado;
     }
 
