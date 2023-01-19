@@ -43,8 +43,7 @@ public class PessoaServiceImpl implements PessoaService {
             isAtualizado = true;
         }
 
-        if (isAtualizado = true) repository.save(pessoa);
-        return isAtualizado;
+        return repository.save(pessoa);
     }
 
     @Override
