@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "ae908ab3-6acf-4fd8-a727-20972620df63",
+		"name": "Gestão Pessoas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23207837"
+	},
+	"item": [
+		{
+			"name": "Criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Erik Gonzaga\",\n    \"nascimento\": \"1987-11-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Endereço",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Erik Gonzaga\",\n    \"nascimento\": \"1987-11-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/1/enderecos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"1",
+						"enderecos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Endereços",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pessoas/1/enderecos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pessoas",
+						"1",
+						"enderecos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token",
+						"value": "BC6X8639be18b115a9",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/contatos/atualizar/:id?nome=Tebastilson Junior&documento=12345678910",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"contatos",
+						"atualizar",
+						":id"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Tebastilson Junior"
+						},
+						{
+							"key": "documento",
+							"value": "12345678910"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "3473153d-ab43-4d2f-a83f-74e4ed969da1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
