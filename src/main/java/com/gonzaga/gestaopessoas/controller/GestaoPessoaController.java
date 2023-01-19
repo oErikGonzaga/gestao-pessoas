@@ -5,6 +5,7 @@ import com.gonzaga.gestaopessoas.model.Pessoa;
 import com.gonzaga.gestaopessoas.service.EnderecoService;
 import com.gonzaga.gestaopessoas.service.PessoaService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,9 +28,10 @@ public class GestaoPessoaController {
 
     @PutMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public boolean editar(@PathVariable Long id,
-                          @RequestParam(value = "nome", required = false) String nome,
-                          @RequestParam(value = "nascimento", required = false) String nascimento){
+    public Pessoa editar(@PathVariable Long id,
+                         @RequestParam(value = "nome", required = false) String nome,
+                         @RequestParam(value = "nascimento", required = false)
+                         @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate nascimento){
 
         return pessoaService.editar(id, nome, nascimento);
     }
