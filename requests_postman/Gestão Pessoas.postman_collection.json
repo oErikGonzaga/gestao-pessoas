@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Criar",
+			"name": "Criar Pessoa",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"Erik Gonzaga\",\n    \"nascimento\": \"1987-11-06\"\n}",
+					"raw": "{\n    \"logradouro\": \"\",\n    \"cep\": \"02542110\",\n    \"numero\": \"641\",\n    \"cidade\": \"\",\n    \"principal\": true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -67,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "Listar",
+			"name": "Listar Pessoas",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -87,7 +87,7 @@
 			"response": []
 		},
 		{
-			"name": "Consultar",
+			"name": "Consultar Pessoa",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -130,42 +130,45 @@
 			"response": []
 		},
 		{
-			"name": "Editar",
+			"name": "Editar Pessoa",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Token",
-						"value": "BC6X8639be18b115a9",
-						"type": "text"
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
 					}
-				],
+				},
 				"url": {
-					"raw": "http://localhost:8081/contatos/atualizar/:id?nome=Tebastilson Junior&documento=12345678910",
+					"raw": "http://localhost:8080/api/pessoas/:id?nome=Erik Gonzaga de Souza&nascimento=1986-11-03",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8080",
 					"path": [
-						"contatos",
-						"atualizar",
+						"api",
+						"pessoas",
 						":id"
 					],
 					"query": [
 						{
 							"key": "nome",
-							"value": "Tebastilson Junior"
+							"value": "Erik Gonzaga de Souza"
 						},
 						{
-							"key": "documento",
-							"value": "12345678910"
+							"key": "nascimento",
+							"value": "1986-11-03"
 						}
 					],
 					"variable": [
 						{
 							"key": "id",
-							"value": "3473153d-ab43-4d2f-a83f-74e4ed969da1"
+							"value": "1"
 						}
 					]
 				}
