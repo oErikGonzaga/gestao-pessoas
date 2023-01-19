@@ -10,5 +10,4 @@ public interface PessoaService {
     boolean editar(Long id, String nome, String nascimento);
     Pessoa consultar(Long id);
     List<Pessoa> listar();
-
 }
