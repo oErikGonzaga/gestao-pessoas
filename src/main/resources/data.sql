@@ -13,7 +13,7 @@ CREATE TABLE enderecos(
     cep        	VARCHAR(8)    	NOT NULL               			,
     numero  	VARCHAR(30)     NULL							,
     cidade		VARCHAR(65)		NOT NULL						,
-    tipo		VARCHAR(30)		NULL							,
+    principal	INT(1)		    NOT NULL						,
     id_pessoa	BIGINT			NOT NULL						,
     FOREIGN KEY	(id_pessoa)		REFERENCES pessoas (id)
 );
