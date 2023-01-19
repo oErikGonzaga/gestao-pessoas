@@ -28,7 +28,7 @@ public class PessoaServiceImpl implements PessoaService {
     }
 
     @Override
-    public boolean editar(Long id, String nome, String nascimento) {
+    public Pessoa editar(Long id, String nome, LocalDate nascimento) {
 
         var pessoa = consultar(id);
         boolean isAtualizado = false;
@@ -39,7 +39,7 @@ public class PessoaServiceImpl implements PessoaService {
         }
 
         if (Objects.nonNull(nascimento) && !(nascimento.equals(pessoa.getNascimento()))) {
-            pessoa.setNascimento(LocalDate.parse(nascimento));
+            pessoa.setNascimento((nascimento));
             isAtualizado = true;
         }
 
