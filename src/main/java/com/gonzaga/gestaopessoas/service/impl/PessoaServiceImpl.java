@@ -1,5 +1,6 @@
 package com.gonzaga.gestaopessoas.service.impl;
 
+import com.gonzaga.gestaopessoas.exception.PessoaCadastroException;
 import com.gonzaga.gestaopessoas.exception.PessoaNotFoundException;
 import com.gonzaga.gestaopessoas.model.Pessoa;
 import com.gonzaga.gestaopessoas.repository.PessoaRepository;
@@ -20,11 +21,8 @@ public class PessoaServiceImpl implements PessoaService {
     @Override
     public Pessoa criar(Pessoa pessoa) {
 
-        var nomeExistente = repository.findFirstByNome(pessoa.getNome());
-        var nascimentoExistente = repository.findFirstByNascimento(pessoa.getNascimento());
-
-        if (Objects.nonNull(nomeExistente) && Objects.nonNull(nascimentoExistente))
-            return null;
+        if (Objects.nonNull(pessoa.getId()))
+            throw new PessoaCadastroException("Tentativa de cadastro incorreta");
 
         return repository.save(pessoa);
     }
