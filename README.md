@@ -81,7 +81,7 @@ sudo docker run -d -p 8080:8080 -t gestao-pessoas-java-container:1.0
 ---
 - ``Java 11``
 - ``Maven 3.8.1``
-- ``SpringBoot 2.7.8``
+- ``SpringBoot 2.7.7``
 - ``IntelliJ IDEA``
 - ``Postman``
 - ``Paradigma de orientação a objetos``
