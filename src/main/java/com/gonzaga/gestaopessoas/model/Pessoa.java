@@ -1,10 +1,12 @@
 package com.gonzaga.gestaopessoas.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,4 +23,8 @@ public class Pessoa {
 
     @Column(nullable = false)
     private LocalDate nascimento;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
+    private List<Endereco> endereco;
+
 }
