@@ -22,29 +22,29 @@ _(a) Uma aplicação que oferece funcionalidade de registro de dados:
    Para cadastrar uma pessoa, devem ser informados seu nome completo, e sua data de nascimento.
    Todos os campos são obrigatórios.
 
-<br>
+
 
 - `Funcionalidade 2` `Edição do cadastro de pessoas`: 
    O sistema pode editar os dados de uma pessoa. 
    Para a edição dos dados no sistema, é preciso informar obrigatoriamente ou seu nome, 
    ou data de nascimento, ou ambos para ser alterado.
 
-<br>
+
 
 - `Funcionalidade 3` `Consulta de pessoa`: 
    Para consulta de uma pessoa no sistema, precisamos informar seu identificador válido no cadastro do sistema.
 
-<br>
+
 
 - `Funcionalidade 4` `Listagem de pessoas cadastradas`: 
    O sistema realiza uma listagem de todas pessoas cadastradas no sistema.
 
-<br>
+
 
 - `Funcionalidade 5` `Cadastro de endereço de pessoa`:
    Cadastra um ou mais endereços se informado um identificador da Pessoa.
 
-<br>
+
 
 - `Funcionalidade 6` `Listagem de endereço da pessoa`:
    O sistema realiza uma listagem de todas endereços relacionados a pessoa cadastrada, 
@@ -68,6 +68,20 @@ docker run -d -p 8080:8080 -t gestao-pessoas-java-container:1.0
 
 _Obs: Deixei o jar do projeto na raiz para rodar via Docker._
 
+## ✔️ Teste Unitários
+
+---
+
+* Prova conceitual da execução dos testes unitários:
+* ``JUnit 5 e Mockito``
+
+<br>
+
+![tests.png](..%2F..%2F..%2FDesktop%2Ftests.png)
+
+
+
+
 ## ✔️ Técnicas e tecnologias utilizadas
 
 ---
@@ -83,6 +97,7 @@ _Obs: Deixei o jar do projeto na raiz para rodar via Docker._
 ## 📁 Acesso ao projeto
 
 ---
-Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/oErikGonzaga/gestao-pessoas/tree/main/src).
+Você pode acessar os arquivos do projeto clicando 
+[aqui](https://github.com/oErikGonzaga/gestao-pessoas/tree/main/src).
 
 
