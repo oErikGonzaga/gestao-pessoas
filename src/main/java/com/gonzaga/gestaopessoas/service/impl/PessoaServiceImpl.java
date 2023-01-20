@@ -42,7 +42,6 @@ public class PessoaServiceImpl implements PessoaService {
             pessoa.setNascimento((nascimento));
             isAtualizado = true;
         }
-
         return repository.save(pessoa);
     }
 

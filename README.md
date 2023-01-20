@@ -66,15 +66,7 @@ docker build -t gestao-pessoas-java-container:1.0 .
 docker run -d -p 8080:8080 -t gestao-pessoas-java-container:1.0
 ```
 
-* Alternativamente com privilégios de Administrador
-
-```
-* Build container
-sudo docker build -t gestao-pessoas-java-container:1.0 .
-
-* Run the container
-sudo docker run -d -p 8080:8080 -t gestao-pessoas-java-container:1.0
-```
+_Obs: Deixei o jar do projeto na raiz para rodar via Docker._
 
 ## ✔️ Técnicas e tecnologias utilizadas
 

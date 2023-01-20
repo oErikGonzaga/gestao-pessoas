@@ -1,5 +1,4 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
-ARG JAR_FILE=target/gestao-pessoas.jar
 WORKDIR /opt/app
-COPY ${JAR_FILE} app.jar
+COPY gestao-pessoas.jar app.jar
 ENTRYPOINT ["java","-jar","app.jar"]
