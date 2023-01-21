@@ -31,16 +31,13 @@ public class PessoaServiceImpl implements PessoaService {
     public Pessoa editar(Long id, String nome, LocalDate nascimento) {
 
         var pessoa = consultar(id);
-        boolean isAtualizado = false;
 
         if (Objects.nonNull(nome) && !("".equals(nome)) && !(nome.equals(pessoa.getNome()))) {
             pessoa.setNome(nome);
-            isAtualizado = true;
         }
 
         if (Objects.nonNull(nascimento) && !(nascimento.equals(pessoa.getNascimento()))) {
             pessoa.setNascimento((nascimento));
-            isAtualizado = true;
         }
         return repository.save(pessoa);
     }
